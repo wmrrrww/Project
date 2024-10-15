@@ -3,11 +3,11 @@ import java.util.Date;
 import java.util.Scanner;
 
 class Transaction {
-    private Date date;
-    private char type; // '+' for deposit, '-' for withdrawal
-    private double amount;
-    private double balance;
-    private String description;
+    private final Date date;
+    private final char type; // '+' for deposit, '-' for withdrawal
+    private final double amount;
+    private final double balance;
+    private final String description;
 
     public Transaction(char type, double amount, double balance, String description) {
         this.date = new Date();
@@ -30,11 +30,11 @@ class Transaction {
 }
 
 class Account {
-    private int id;
+    private final int id;
     private double balance;
     private double annualInterestRate;
-    private Date dateCreated;
-    private ArrayList<Transaction> transactions;
+    private final Date dateCreated;
+    private final ArrayList<Transaction> transactions;
 
     public Account(int id, double balance, double annualInterestRate) {
         this.id = id;
